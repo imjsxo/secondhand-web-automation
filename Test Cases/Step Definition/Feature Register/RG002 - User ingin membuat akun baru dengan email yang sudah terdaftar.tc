@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RG002 - User ingin membuat akun baru dengan email yang sudah terdaftar</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5c2c8b97-ca6e-475f-a55b-30fcfb41382d</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LG002 - User ingin login dengan email yang salah</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6ffc1417-489a-4310-a2d4-154afe8542a2</testCaseGuid>
+</TestCaseEntity>

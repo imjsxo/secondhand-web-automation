@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LGT001 - user ingin logout dari akun</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>79862a57-5d35-4c94-a3c2-6d0929165a6d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>886e3016-1bb4-45bf-a3c6-ef7752a1843e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>886e3016-1bb4-45bf-a3c6-ef7752a1843e</id>
+      <masked>false</masked>
+      <name>executeStep</name>
+   </variable>
+</TestCaseEntity>
