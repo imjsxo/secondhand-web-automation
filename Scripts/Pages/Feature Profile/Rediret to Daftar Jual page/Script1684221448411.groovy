@@ -17,12 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Step Definition/Feature Login/LG001 - User ingin login dengan kredensial yang benar'), 
-    [('closeBrowser') : false], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Profile/btn_nav_list'))
 
-WebUI.click(findTestObject('Feature Login/btn_nav_user'))
-
-WebUI.click(findTestObject('Feature Profile/btn_nav_profile'))
-
-WebUI.callTestCase(findTestCase('Pages/Feature Profile/Verify element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Profile/profile_button_edit'))
 

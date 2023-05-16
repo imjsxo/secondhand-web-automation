@@ -5,4 +5,17 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>11250e2c-5a97-4822-b500-97dad32849df</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e434b0f9-8080-4572-9ff0-c7c578d86540</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>e434b0f9-8080-4572-9ff0-c7c578d86540</id>
+      <masked>false</masked>
+      <name>closeBrowser</name>
+   </variable>
 </TestCaseEntity>

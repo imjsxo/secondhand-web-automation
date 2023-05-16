@@ -19,8 +19,6 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Pages/Feature Profile/Redirect to profile page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Pages/Feature Profile/Verify element'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.setText(findTestObject('Feature Profile/profile_input_name'), 'Akun percobaan')
 
 WebUI.click(findTestObject('Feature Profile/profile_button_submit'))

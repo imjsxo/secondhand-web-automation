@@ -14,15 +14,19 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import graphql.language.InputValueDefinition as InputValueDefinition
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Step Definition/Feature Login/LG001 - User ingin login dengan kredensial yang benar'), 
-    [('closeBrowser') : false], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Pages/Feature Profile/Redirect to profile page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Feature Login/btn_nav_user'))
+WebUI.setText(findTestObject('Feature Profile/profile_input_number'), '081234567892')
 
-WebUI.click(findTestObject('Feature Profile/btn_nav_profile'))
+WebUI.click(findTestObject('Feature Profile/profile_button_submit'))
 
-WebUI.callTestCase(findTestCase('Pages/Feature Profile/Verify element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.waitForElementPresent(findTestObject('Feature Profile/profile_update_success'), 2)
+
+WebUI.verifyElementPresent(findTestObject('Feature Profile/profile_update_success'), 0)
+
+WebUI.closeBrowser()
 

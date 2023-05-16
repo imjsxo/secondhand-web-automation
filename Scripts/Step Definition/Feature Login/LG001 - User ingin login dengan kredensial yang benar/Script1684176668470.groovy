@@ -29,3 +29,7 @@ WebUI.click(findTestObject('Feature Login/login_button'))
 
 WebUI.verifyElementPresent(findTestObject('Feature Login/btn_nav_user'), 0)
 
+if (closeBrowser) {
+    WebUI.closeBrowser()
+}
+
