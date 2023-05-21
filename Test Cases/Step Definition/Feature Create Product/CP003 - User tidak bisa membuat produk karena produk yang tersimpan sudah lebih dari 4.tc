@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CP003 - User tidak bisa membuat produk karena produk yang tersimpan sudah lebih dari 4</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>06eedeae-5d94-4942-bf61-c2c3b617b807</testCaseGuid>
+</TestCaseEntity>

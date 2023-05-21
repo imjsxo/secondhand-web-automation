@@ -17,19 +17,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Redirect to login page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Step Definition/Feature Login/LG001 - User ingin login dengan kredensial yang benar'), 
+    [('closeBrowser') : false], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Verify Element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Product Detail Page/pdp_product2'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_email'), 'elyseenmoba@gmail.com')
+WebUI.click(findTestObject('Feature Product Detail Page/pdp_button_nego'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_password'), 'Admin123')
+WebUI.setText(findTestObject('Feature Product Detail Page/pdp_input_bidPrice'), '1000')
 
-WebUI.click(findTestObject('Feature Login/login_button'))
+WebUI.click(findTestObject('Feature Product Detail Page/pdp_button_kirim'))
 
-WebUI.verifyElementPresent(findTestObject('Feature Login/btn_nav_user'), 0)
+WebUI.verifyElementPresent(findTestObject('Feature Product Detail Page/pdp_alert_success'), 0)
 
-if (closeBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.verifyElementPresent(findTestObject('Feature Product Detail Page/pdp_button_wait_response'), 0)
+
+WebUI.closeBrowser()
 

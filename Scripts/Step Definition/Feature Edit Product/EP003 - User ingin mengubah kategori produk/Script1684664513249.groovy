@@ -17,19 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Redirect to login page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Step Definition/Feature Login/LG001 - User ingin login dengan kredensial yang benar'), 
+    [('closeBrowser') : false], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Verify Element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Profile/btn_nav_list'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_email'), 'elyseenmoba@gmail.com')
+WebUI.click(findTestObject('Feature Edit Produk/ep_product1'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_password'), 'Admin123')
+WebUI.click(findTestObject('Feature Edit Produk/ep_btn_edit'))
 
-WebUI.click(findTestObject('Feature Login/login_button'))
+WebUI.selectOptionByValue(findTestObject('Feature Create Product/cp_product_category'), '1', false)
 
-WebUI.verifyElementPresent(findTestObject('Feature Login/btn_nav_user'), 0)
+WebUI.click(findTestObject('Feature Edit Produk/ep_btn_terbit'))
 
-if (closeBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.click(findTestObject('Feature Profile/btn_nav_list'))
+
+WebUI.verifyTextPresent('Hoby', false)
+
+WebUI.closeBrowser()
 

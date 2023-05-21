@@ -17,19 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Redirect to login page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Pages/Feature Product List/Open browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Verify Element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Product List/button_category_all'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_email'), 'elyseenmoba@gmail.com')
+WebUI.verifyElementPresent(findTestObject('Feature Product List/product_category_kesehatan'), 3)
 
-WebUI.setText(findTestObject('Feature Login/login_input_password'), 'Admin123')
+WebUI.verifyElementPresent(findTestObject('Feature Product List/product_category_hoby'), 2)
 
-WebUI.click(findTestObject('Feature Login/login_button'))
+WebUI.verifyElementPresent(findTestObject('Feature Product List/product_category_baju'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Feature Login/btn_nav_user'), 0)
+WebUI.verifyElementPresent(findTestObject('Feature Product List/product_category_elektronik'), 0)
 
-if (closeBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.verifyElementPresent(findTestObject('Feature Product List/product_category_kendaraan'), 0)
+
+WebUI.closeBrowser()
 

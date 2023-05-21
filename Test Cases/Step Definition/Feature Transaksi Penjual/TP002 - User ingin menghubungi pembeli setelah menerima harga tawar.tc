@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TP002 - User ingin menghubungi pembeli setelah menerima harga tawar</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e4bf68e0-0142-4efc-a953-0c4c23f86077</testCaseGuid>
+</TestCaseEntity>

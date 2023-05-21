@@ -17,19 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Redirect to login page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Pages/Feature Product List/Open browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Verify Element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Product Detail Page/pdp_product1'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_email'), 'elyseenmoba@gmail.com')
+WebUI.verifyTextPresent('Setrika Maspion', true, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Feature Login/login_input_password'), 'Admin123')
-
-WebUI.click(findTestObject('Feature Login/login_button'))
-
-WebUI.verifyElementPresent(findTestObject('Feature Login/btn_nav_user'), 0)
-
-if (closeBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.closeBrowser()
 

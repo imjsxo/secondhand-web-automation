@@ -17,19 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Redirect to login page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Step Definition/Feature Login/LG001 - User ingin login dengan kredensial yang benar'), 
+    [('closeBrowser') : false], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Pages/Feature Login/Verify Element'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Feature Create Product/df_btn_add_product'))
 
-WebUI.setText(findTestObject('Feature Login/login_input_email'), 'elyseenmoba@gmail.com')
+WebUI.setText(findTestObject('Feature Create Product/cp_product_name'), 'Mobil Mazda')
 
-WebUI.setText(findTestObject('Feature Login/login_input_password'), 'Admin123')
+WebUI.setText(findTestObject('Feature Create Product/cp_product_price'), '200000000')
 
-WebUI.click(findTestObject('Feature Login/login_button'))
+WebUI.selectOptionByValue(findTestObject('Feature Create Product/cp_product_category'), '2', true)
 
-WebUI.verifyElementPresent(findTestObject('Feature Login/btn_nav_user'), 0)
+WebUI.setText(findTestObject('Feature Create Product/cp_product_description'), 'New')
 
-if (closeBrowser) {
-    WebUI.closeBrowser()
-}
+'Upload test-photo.png to input_browse'
+WebUI.uploadFile(findTestObject('Feature Create Product/cp_product_img'), '"C:\\Users\\User\\Downloads\\mazda-6-black-c5f2.png"')
+
+WebUI.click(findTestObject('Feature Create Product/cp_btn_terbitkan'))
+
+WebUI.closeBrowser()
 

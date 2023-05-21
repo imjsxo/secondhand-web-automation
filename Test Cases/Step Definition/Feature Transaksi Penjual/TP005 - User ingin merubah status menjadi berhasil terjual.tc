@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TP005 - User ingin merubah status menjadi berhasil terjual</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>770b16f0-0c8e-487d-9550-07668f5078b2</testCaseGuid>
+</TestCaseEntity>

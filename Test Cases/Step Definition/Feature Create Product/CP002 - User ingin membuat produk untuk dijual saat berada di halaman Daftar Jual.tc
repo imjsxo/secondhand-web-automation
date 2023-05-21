@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CP002 - User ingin membuat produk untuk dijual saat berada di halaman Daftar Jual</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2e0c7c43-8b70-41d6-85bd-3c5d29e592e4</testCaseGuid>
+</TestCaseEntity>

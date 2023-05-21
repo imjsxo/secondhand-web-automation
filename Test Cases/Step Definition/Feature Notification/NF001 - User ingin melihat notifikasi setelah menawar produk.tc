@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>NF001 - User ingin melihat notifikasi setelah menawar produk</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cb28918b-4e08-475f-9a32-5740ac485461</testCaseGuid>
+</TestCaseEntity>
